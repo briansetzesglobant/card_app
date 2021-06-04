@@ -6,73 +6,82 @@ void main() {
 
 class MyApp extends StatelessWidget {
   static const double _radius = 100;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Card App',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+      title: 'Card App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(
+          255,
+          0,
+          217,
+          255,
         ),
-        home: Scaffold(
-          backgroundColor: Color.fromARGB(255, 0, 217, 255),
-          body: SafeArea(
-            top: true,
-            bottom: true,
-            left: true,
-            right: true,
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'assets/images/avatar.jpg',
-                    ),
-                    radius: _radius,
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage(
+                    'assets/images/avatar.jpg',
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      "Trainee Flutter developer",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        backgroundColor: Colors.lightGreenAccent,
-                        fontSize: 25.0,
-                        letterSpacing: 3.0,
-                        color: Colors.blue,
-                      ),
+                  radius: _radius,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(
+                    5,
+                  ),
+                  child: Text(
+                    "Trainee Flutter developer",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      backgroundColor: Colors.lightGreenAccent,
+                      fontSize: 25.0,
+                      letterSpacing: 3.0,
+                      color: Colors.blue,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      "Brian Iván Setzes",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        backgroundColor: Colors.yellow,
-                        fontSize: 25.0,
-                        letterSpacing: 3.0,
-                        color: Colors.teal,
-                      ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(
+                    5,
+                  ),
+                  child: Text(
+                    "Brian Iván Setzes",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      backgroundColor: Colors.yellow,
+                      fontSize: 25.0,
+                      letterSpacing: 3.0,
+                      color: Colors.teal,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                    child: Text(
-                      "brian.setzes@globant.com",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        backgroundColor: Colors.yellow,
-                        fontSize: 20.0,
-                        letterSpacing: 3.0,
-                        color: Colors.teal,
-                      ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(
+                    5,
+                  ),
+                  child: Text(
+                    "brian.setzes@globant.com",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      backgroundColor: Colors.yellow,
+                      fontSize: 20.0,
+                      letterSpacing: 3.0,
+                      color: Colors.teal,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
